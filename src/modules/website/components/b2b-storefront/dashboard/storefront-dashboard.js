@@ -3,7 +3,7 @@
  */
 
 import { LitElement, html } from 'lit';
-import { getCompanyById } from '../../../services/company.service.js';
+import { getCompanyById } from '../../../../companies/services/company.service.js';
 import { getPurchaseOrders } from '../../../services/purchaseorder.service.js';
 
 class StorefrontDashboard extends LitElement {

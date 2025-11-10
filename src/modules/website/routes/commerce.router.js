@@ -88,17 +88,17 @@ export const createCommerceRoutes = () => [
       `;
     }
   },
-  {
-    path: '/website/cart',
-    render: () => {
-      import('@modules/website/components/cart/shopping-cart.js');
-      return html`
-        <route-wrapper requiredModule="/module/commerce">
-          <shopping-cart></shopping-cart>
-        </route-wrapper>
-      `;
-    }
-  },
+  // {
+  //   path: '/website/cart',
+  //   render: () => {
+  //     import('@modules/website/components/cart/shopping-cart.js');
+  //     return html`
+  //       <route-wrapper requiredModule="/module/commerce">
+  //         <shopping-cart></shopping-cart>
+  //       </route-wrapper>
+  //     `;
+  //   }
+  // },
   {
     path: '/website/categories',
     render: () => {

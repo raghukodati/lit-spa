@@ -161,13 +161,13 @@ export class AppShell extends LitElement {
   _checkAuth() {
     const path = window.location.pathname;
     // Allow access to login page
-    if (path === '/login') {
+    if (path === '/lit-spa/login') {
       return;
     }
     
     // Check if authenticated
     if (!authState.authenticated) {
-      window.location.href = '/login';
+      window.location.href = '/lit-spa/login';
       return;
     }
     
@@ -221,7 +221,7 @@ export class AppShell extends LitElement {
     appContextProvider.clearNotifications();
     
     this.currentUser = null;
-    window.location.href = '/login';
+    window.location.href = '/lit-spa/login';
   }
 
   _toggleMenu() {
@@ -360,7 +360,7 @@ export class AppShell extends LitElement {
 
   render() {
     const currentPath = window.location.pathname;
-    const isPublicRoute = currentPath === '/login' || currentPath === '/callback' || currentPath === '/access-denied';
+    const isPublicRoute = currentPath === '/lit-spa/login' || currentPath === '/lit-spa/callback' || currentPath === '/lit-spa/access-denied';
     
     // If on public route, render without dashboard layout
     if (isPublicRoute) {
@@ -371,7 +371,7 @@ export class AppShell extends LitElement {
     if (!authState.authenticated) {
       // Not authenticated - redirect to login and show nothing
       const returnUrl = encodeURIComponent(currentPath + window.location.search);
-      window.location.href = `/login?returnUrl=${returnUrl}`;
+      window.location.href = `/lit-spa/login?returnUrl=${returnUrl}`;
       return html``;
     }
 

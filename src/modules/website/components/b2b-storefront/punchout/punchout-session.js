@@ -5,7 +5,7 @@
 
 import { LitElement, html } from 'lit';
 import { getProducts } from '../../../services/product.service.js';
-import { getCompanyById } from '../../../services/company.service.js';
+import { getCompanyById } from '../../../../companies/services/company.service.js';
 
 class PunchoutSession extends LitElement {
   static properties = {
