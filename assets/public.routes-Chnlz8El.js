@@ -1,0 +1,1 @@
+import{N as e}from"./index-DfU7H5-o.js";const c=[{path:"/login",render:()=>e`<login-page></login-page>`},{path:"/callback",render:()=>e`<oidc-callback></oidc-callback>`},{path:"/access-denied",render:()=>e`<access-denied></access-denied>`},{path:"/samples/xml-viewer",render:()=>e`<xml-viewer-page></xml-viewer-page>`}];export{c as default,c as publicRoutes};
