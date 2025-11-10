@@ -1,0 +1,92 @@
+═══════════════════════════════════════════════════════════════
+QUICK IMPERSONATION MENU TEST
+═══════════════════════════════════════════════════════════════
+
+STEP 1: Copy and paste this into your browser console:
+───────────────────────────────────────────────────────────────
+
+(async()=>{try{const{hasModuleAccess:a}=await import('./src/services/dataService.js'),{hasPermission:b}=await import('./src/services/casl-permission.service.js'),{impersonationService:c}=await import('./src/services/impersonation.service.js');console.log('🎭 Loaded modules, checking permissions...');const d=a('admin'),e=b('users','read'),f=c.canImpersonate();console.log('\n🎭 IMPERSONATION MENU CHECK:');console.log(`Admin module: ${d?'✅':'❌'} ${d}`);console.log(`users.read:   ${e?'✅':'❌'} ${e}`);console.log(`Can show menu: ${f?'✅':'❌'} ${f}`);f?console.log('\n✅ MENU SHOULD BE VISIBLE!\nIf not, hard refresh: Cmd+Shift+R'):console.log('\n❌ MENU HIDDEN - Missing permissions\nRun CONSOLE-DEBUG.js for details')}catch(err){console.error('❌ Error:',err)}})();
+
+───────────────────────────────────────────────────────────────
+
+EXPECTED OUTPUT (Working):
+───────────────────────────────────────────────────────────────
+🎭 IMPERSONATION MENU CHECK:
+Admin module: ✅ true
+users.read:   ✅ true
+Can show menu: ✅ true
+
+✅ MENU SHOULD BE VISIBLE!
+If not, hard refresh: Cmd+Shift+R
+
+───────────────────────────────────────────────────────────────
+
+IF YOU SEE FALSE VALUES:
+───────────────────────────────────────────────────────────────
+
+Problem: Admin module: ❌ false
+Fix: User needs admin role with admin permissions
+
+Problem: users.read: ❌ false  
+Fix: User needs role with users.read permission
+
+Problem: Can show menu: ❌ false
+Fix: User needs BOTH admin module AND users.read
+
+───────────────────────────────────────────────────────────────
+
+STEP 2: If all checks pass but menu still not visible:
+───────────────────────────────────────────────────────────────
+
+Clear cache and refresh:
+
+localStorage.clear(); location.reload();
+
+Then hard refresh:
+- Mac: Cmd + Shift + R
+- Windows/Linux: Ctrl + Shift + F5
+
+───────────────────────────────────────────────────────────────
+
+STEP 3: Check browser console for 🎭 emoji messages
+
+Look for these messages in console (they'll appear automatically):
+
+✅ Good signs:
+🎭 canImpersonate check: { hasAdminAccess: true, hasUsersPermission: true, result: true }
+🎭 Impersonation check: true
+🎭 Showing impersonate menu item
+
+❌ Problem signs:
+🎭 canImpersonate check: { hasAdminAccess: false, ... }
+🎭 Impersonation check: false
+🎭 Hiding impersonate menu item - user lacks permission
+🎭 Error checking impersonation permission: ...
+
+───────────────────────────────────────────────────────────────
+
+STEP 4: Test direct navigation
+
+Go to: http://localhost:5173/users/impersonate
+
+- Loads successfully? → Route works, menu filter issue
+- Shows "Access Denied"? → Permission check working correctly
+- 404 error? → Route not configured
+
+───────────────────────────────────────────────────────────────
+
+NEED MORE DETAILS?
+
+Run the full diagnostic:
+Open: CONSOLE-DEBUG.js
+Copy entire file contents
+Paste in browser console
+
+This will show:
+- Current user details
+- All user roles
+- All permissions
+- Detailed checks
+- Specific fix recommendations
+
+═══════════════════════════════════════════════════════════════

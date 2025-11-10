@@ -1,0 +1,337 @@
+[
+  {
+    "id": 1,
+    "name": "Super Administrator",
+    "description": "Full system access with all privileges",
+    "category": "system",
+    "priority": 1,
+    "parentRoleId": null,
+    "inheritPermissions": false,
+    "isSystemRole": true,
+    "permissions": {
+      "users": ["manage"],
+      "roles": ["manage"],
+      "permissions": ["manage"],
+      "audit": ["manage"],
+      "security": ["manage"],
+      "sessions": ["manage"],
+      "incidents": ["manage"],
+      "products": ["manage"],
+      "orders": ["manage"],
+      "customers": ["manage"],
+      "customer_orgs": ["manage"],
+      "companies": ["manage"],
+      "reports": ["manage"],
+      "settings": ["manage"],
+      "gdocs": ["manage"],
+      "commerce": ["manage"],
+      "inventory": ["manage"],
+      "documents": ["manage"]
+    },
+    "fieldPermissions": {},
+    "dataScope": "global",
+    "scopeRules": {},
+    "constraints": {
+      "maxRecords": null,
+      "timeRestrictions": null,
+      "ipRestrictions": [],
+      "allowedDays": null
+    },
+    "userCount": 1,
+    "isActive": true,
+    "expiresAt": null,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "createdBy": null,
+    "updatedAt": "2024-01-01T00:00:00Z",
+    "updatedBy": null
+  },
+  {
+    "id": 2,
+    "name": "Administrator",
+    "description": "Administrative access with most privileges",
+    "category": "admin",
+    "priority": 10,
+    "parentRoleId": null,
+    "inheritPermissions": false,
+    "isSystemRole": true,
+    "permissions": {
+      "users": ["create", "read", "update"],
+      "roles": ["read"],
+      "audit": ["read"],
+      "security": ["read"],
+      "sessions": ["read"],
+      "incidents": ["create", "read", "update", "delete"],
+      "products": ["create", "read", "update", "delete"],
+      "orders": ["create", "read", "update", "delete"],
+      "customers": ["create", "read", "update", "delete"],
+      "customer_orgs": ["create", "read", "update", "delete"],
+      "companies": ["create", "read", "update", "delete"],
+      "reports": ["read", "export"],
+      "settings": ["read"],
+      "gdocs": ["create", "read", "update", "delete"],
+      "commerce": ["create", "read", "update", "delete"],
+      "inventory": ["read", "update"],
+      "documents": ["create", "read", "update"]
+    },
+    "fieldPermissions": {
+      "users": {
+        "salary": { "readable": false, "writable": false },
+        "ssn": { "readable": false, "writable": false }
+      }
+    },
+    "dataScope": "organization",
+    "scopeRules": {},
+    "constraints": {
+      "maxRecords": null,
+      "timeRestrictions": null,
+      "ipRestrictions": [],
+      "allowedDays": null
+    },
+    "userCount": 1,
+    "isActive": true,
+    "expiresAt": null,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "createdBy": 1,
+    "updatedAt": "2024-01-01T00:00:00Z",
+    "updatedBy": 1
+  },
+  {
+    "id": 3,
+    "name": "Manager",
+    "description": "Department and team management",
+    "category": "custom",
+    "priority": 20,
+    "parentRoleId": null,
+    "inheritPermissions": false,
+    "isSystemRole": false,
+    "permissions": {
+      "users": ["read"],
+      "audit": ["read"],
+      "incidents": ["create", "read", "update", "assign"],
+      "products": ["read", "update"],
+      "orders": ["read", "update", "approve"],
+      "customers": ["create", "read", "update"],
+      "customer_orgs": ["read", "update"],
+      "companies": ["read", "update"],
+      "reports": ["read"],
+      "gdocs": ["create", "read", "update"],
+      "commerce": ["read", "update"],
+      "inventory": ["read", "update"],
+      "documents": ["create", "read", "update"]
+    },
+    "fieldPermissions": {
+      "users": {
+        "salary": { "readable": false, "writable": false },
+        "ssn": { "readable": false, "writable": false }
+      },
+      "customers": {
+        "creditLimit": { "readable": true, "writable": false }
+      }
+    },
+    "dataScope": "department",
+    "scopeRules": {},
+    "constraints": {
+      "maxRecords": null,
+      "timeRestrictions": null,
+      "ipRestrictions": [],
+      "allowedDays": null
+    },
+    "userCount": 2,
+    "isActive": true,
+    "expiresAt": null,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "createdBy": 1,
+    "updatedAt": "2024-01-01T00:00:00Z",
+    "updatedBy": 1
+  },
+  {
+    "id": 4,
+    "name": "Sales Representative",
+    "description": "Sales operations and customer management",
+    "category": "custom",
+    "priority": 30,
+    "parentRoleId": null,
+    "inheritPermissions": false,
+    "isSystemRole": false,
+    "permissions": {
+      "products": ["read"],
+      "orders": ["create", "read", "update"],
+      "customers": ["create", "read", "update"],
+      "companies": ["read", "update"],
+      "reports": ["read"],
+      "commerce": ["read"],
+      "inventory": ["read"],
+      "documents": ["read"]
+    },
+    "fieldPermissions": {
+      "customers": {
+        "creditLimit": { "readable": true, "writable": false },
+        "accountBalance": { "readable": true, "writable": false }
+      },
+      "orders": {
+        "cost": { "readable": false, "writable": false },
+        "discount": { "readable": true, "writable": true }
+      }
+    },
+    "dataScope": "team",
+    "scopeRules": {
+      "customers": [
+        {
+          "condition": {
+            "field": "assignedTo",
+            "operator": "isCurrentUser"
+          }
+        }
+      ],
+      "orders": [
+        {
+          "condition": {
+            "field": "createdBy",
+            "operator": "isCurrentUser"
+          }
+        }
+      ]
+    },
+    "constraints": {
+      "maxRecords": 1000,
+      "timeRestrictions": null,
+      "ipRestrictions": [],
+      "allowedDays": null
+    },
+    "userCount": 2,
+    "isActive": true,
+    "expiresAt": null,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "createdBy": 1,
+    "updatedAt": "2024-01-01T00:00:00Z",
+    "updatedBy": 1
+  },
+  {
+    "id": 5,
+    "name": "Analyst",
+    "description": "Data analysis and reporting",
+    "category": "custom",
+    "priority": 40,
+    "parentRoleId": null,
+    "inheritPermissions": false,
+    "isSystemRole": false,
+    "permissions": {
+      "users": ["read"],
+      "incidents": ["read"],
+      "products": ["read"],
+      "orders": ["read"],
+      "customers": ["read"],
+      "companies": ["read"],
+      "reports": ["read", "export"],
+      "analytics": ["read"]
+    },
+    "fieldPermissions": {
+      "users": {
+        "salary": { "readable": false, "writable": false },
+        "ssn": { "readable": false, "writable": false }
+      }
+    },
+    "dataScope": "organization",
+    "scopeRules": {},
+    "constraints": {
+      "maxRecords": null,
+      "timeRestrictions": null,
+      "ipRestrictions": [],
+      "allowedDays": null
+    },
+    "userCount": 1,
+    "isActive": true,
+    "expiresAt": null,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "createdBy": 1,
+    "updatedAt": "2024-01-01T00:00:00Z",
+    "updatedBy": 1
+  },
+  {
+    "id": 6,
+    "name": "Support Agent",
+    "description": "Customer support and incident management",
+    "category": "custom",
+    "priority": 50,
+    "parentRoleId": null,
+    "inheritPermissions": false,
+    "isSystemRole": false,
+    "permissions": {
+      "incidents": ["create", "read", "update"],
+      "customers": ["read"],
+      "products": ["read"]
+    },
+    "fieldPermissions": {
+      "customers": {
+        "creditLimit": { "readable": false, "writable": false },
+        "accountBalance": { "readable": false, "writable": false }
+      }
+    },
+    "dataScope": "own",
+    "scopeRules": {
+      "incidents": [
+        {
+          "condition": {
+            "field": "assignedTo",
+            "operator": "isCurrentUser"
+          }
+        }
+      ]
+    },
+    "constraints": {
+      "maxRecords": 500,
+      "timeRestrictions": null,
+      "ipRestrictions": [],
+      "allowedDays": null
+    },
+    "userCount": 0,
+    "isActive": true,
+    "expiresAt": null,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "createdBy": 1,
+    "updatedAt": "2024-01-01T00:00:00Z",
+    "updatedBy": 1
+  },
+  {
+    "id": 7,
+    "name": "Viewer",
+    "description": "Read-only access to basic information",
+    "category": "custom",
+    "priority": 100,
+    "parentRoleId": null,
+    "inheritPermissions": false,
+    "isSystemRole": false,
+    "permissions": {
+      "products": ["read"],
+      "orders": ["read"],
+      "customers": ["read"],
+      "companies": ["read"],
+      "reports": ["read"]
+    },
+    "fieldPermissions": {
+      "customers": {
+        "creditLimit": { "readable": false, "writable": false },
+        "accountBalance": { "readable": false, "writable": false }
+      },
+      "orders": {
+        "cost": { "readable": false, "writable": false },
+        "discount": { "readable": false, "writable": false }
+      }
+    },
+    "dataScope": "department",
+    "scopeRules": {},
+    "constraints": {
+      "maxRecords": 100,
+      "timeRestrictions": null,
+      "ipRestrictions": [],
+      "allowedDays": null
+    },
+    "userCount": 0,
+    "isActive": true,
+    "expiresAt": null,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "createdBy": 1,
+    "updatedAt": "2024-01-01T00:00:00Z",
+    "updatedBy": 1
+  }
+]

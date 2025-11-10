@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Silent Token Renewal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script type="module">
+        import { UserManager } from '/node_modules/oidc-client-ts/dist/esm/index.js';
+        import { oidcConfig } from '/src/config/oidc.config.js';
+        
+        // Create a minimal UserManager instance for silent renew
+        const userManager = new UserManager(oidcConfig);
+        
+        // Handle silent renew callback
+        userManager.signinSilentCallback()
+            .then(() => {
+                console.log('Silent token renewal successful');
+            })
+            .catch((error) => {
+                console.error('Silent token renewal failed:', error);
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+h1 { 
+  font-size: 1.875rem; 
+  margin: 0 0 0.5rem; 
+  color: white;
+  font-weight: 700;
+}
+p { color: #94a3b8; }
+.card { 
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border: 1px solid #3b82f6;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+a { 
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+  }
+}

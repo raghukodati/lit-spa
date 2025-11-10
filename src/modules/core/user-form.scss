@@ -1,0 +1,158 @@
+.user-form-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.5rem;
+      color: white;
+      font-weight: 700;
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      margin: 0;
+      font-size: 0.875rem;
+    }
+
+    .btn-back {
+      padding: 0.625rem 1.25rem;
+      background: rgba(51, 65, 85, 0.6);
+      color: #cbd5e1;
+      border: 1px solid #475569;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.875rem;
+      white-space: nowrap;
+
+      &:hover {
+        background: #475569;
+        border-color: #64748b;
+        color: white;
+        transform: translateX(-2px);
+      }
+    }
+  }
+
+  .form-card {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border: 1px solid #3b82f6;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(59, 130, 246, 0.1);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: #e2e8f0;
+      letter-spacing: 0.025em;
+    }
+
+    input, select {
+      padding: 0.75rem 1rem;
+      border: 1px solid #475569;
+      border-radius: 0.5rem;
+      font-size: 0.9375rem;
+      background: #0f172a;
+      color: #e2e8f0;
+      transition: all 0.2s;
+      font-family: inherit;
+      
+      &:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        background: #1e293b;
+      }
+
+      &::placeholder {
+        color: #64748b;
+      }
+    }
+
+    select {
+      cursor: pointer;
+    }
+  }
+
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #334155;
+
+    button {
+      padding: 0.875rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+      flex: 1;
+
+      &:hover:not(:disabled) {
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(99, 102, 241, 0.4);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+      }
+    }
+
+    .btn-secondary {
+      background: #475569;
+      color: #e2e8f0;
+      min-width: 120px;
+
+      &:hover {
+        background: #334155;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}

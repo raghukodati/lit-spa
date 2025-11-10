@@ -1,0 +1,50 @@
+[
+  {
+    "id": "users",
+    "name": "Users",
+    "icon": "people",
+    "description": "User accounts and profiles"
+  },
+  {
+    "id": "incidents",
+    "name": "Incidents",
+    "icon": "exclamation-triangle",
+    "description": "SLA incident tracking and management"
+  },
+  {
+    "id": "products",
+    "name": "Products",
+    "icon": "box",
+    "description": "Product catalog management"
+  },
+  {
+    "id": "orders",
+    "name": "Orders",
+    "icon": "cart",
+    "description": "Order processing and tracking"
+  },
+  {
+    "id": "customers",
+    "name": "Customers",
+    "icon": "person-badge",
+    "description": "Customer relationship management"
+  },
+  {
+    "id": "reports",
+    "name": "Reports",
+    "icon": "file-earmark-bar-graph",
+    "description": "Analytics and reporting"
+  },
+  {
+    "id": "settings",
+    "name": "Settings",
+    "icon": "gear",
+    "description": "System configuration"
+  },
+  {
+    "id": "gdocs",
+    "name": "Gdocs",
+    "icon": "file-earmark-text",
+    "description": "Document management and collaboration"
+  }
+]

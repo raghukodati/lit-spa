@@ -1,0 +1,26 @@
+[
+  {
+    "id": "create",
+    "name": "Create",
+    "icon": "plus-circle",
+    "color": "success"
+  },
+  {
+    "id": "read",
+    "name": "Read",
+    "icon": "eye",
+    "color": "info"
+  },
+  {
+    "id": "update",
+    "name": "Update",
+    "icon": "pencil",
+    "color": "warning"
+  },
+  {
+    "id": "delete",
+    "name": "Delete",
+    "icon": "trash",
+    "color": "danger"
+  }
+]

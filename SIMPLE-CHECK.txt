@@ -1,0 +1,106 @@
+═══════════════════════════════════════════════════════════════
+SIMPLEST IMPERSONATION CHECK (If imports are already loaded)
+═══════════════════════════════════════════════════════════════
+
+METHOD 1: Direct check (paste in console)
+───────────────────────────────────────────────────────────────
+
+console.log('Admin module:', window.hasModuleAccess?.('admin') ?? 'Not loaded');
+console.log('users.read:', window.hasPermission?.('users', 'read') ?? 'Not loaded');
+
+───────────────────────────────────────────────────────────────
+
+METHOD 2: With module imports (paste in console)
+───────────────────────────────────────────────────────────────
+
+(async()=>{
+  try {
+    const { hasModuleAccess } = await import('./src/services/dataService.js');
+    const { hasPermission } = await import('./src/services/casl-permission.service.js');
+    const { impersonationService } = await import('./src/services/impersonation.service.js');
+    
+    console.log('\n🎭 IMPERSONATION CHECK:');
+    const hasAdmin = hasModuleAccess('admin');
+    const hasUsers = hasPermission('users', 'read');
+    const canImp = impersonationService.canImpersonate();
+    
+    console.log('Admin module:', hasAdmin);
+    console.log('users.read:', hasUsers);
+    console.log('Can impersonate:', canImp);
+    
+    if (canImp) {
+      console.log('\n✅ Menu should be visible!');
+    } else {
+      console.log('\n❌ Menu hidden because:');
+      if (!hasAdmin) console.log('  - Missing admin module access');
+      if (!hasUsers) console.log('  - Missing users.read permission');
+    }
+  } catch (err) {
+    console.error('Error:', err.message);
+  }
+})();
+
+───────────────────────────────────────────────────────────────
+
+METHOD 3: Check localStorage directly
+───────────────────────────────────────────────────────────────
+
+// Check current user
+const user = JSON.parse(localStorage.getItem('auth_user'));
+console.log('Current User:', user?.name, user?.email);
+console.log('User ID:', user?.id);
+console.log('Assigned Roles:', user?.assignedRoles);
+
+// Check user's full data
+const users = JSON.parse(localStorage.getItem('users_cache') || '[]');
+const userDb = users.find(u => u.id === user?.id);
+console.log('User from DB:', userDb);
+
+// Check roles
+const roles = JSON.parse(localStorage.getItem('roles_cache') || '[]');
+const userRoles = (userDb?.assignedRoles || [])
+  .map(id => roles.find(r => r.id === id))
+  .filter(Boolean);
+console.log('User Roles:', userRoles.map(r => r.name));
+
+// Check permissions
+userRoles.forEach(role => {
+  console.log(`\nRole: ${role.name}`);
+  console.log('Permissions:', role.permissions);
+  if (role.permissions?.users) {
+    console.log('  ✅ Has users permissions:', role.permissions.users);
+  } else {
+    console.log('  ❌ No users permissions');
+  }
+});
+
+───────────────────────────────────────────────────────────────
+
+What you should see if everything is correct:
+───────────────────────────────────────────────────────────────
+
+🎭 IMPERSONATION CHECK:
+Admin module: true
+users.read: true
+Can impersonate: true
+
+✅ Menu should be visible!
+
+───────────────────────────────────────────────────────────────
+
+Common problems:
+───────────────────────────────────────────────────────────────
+
+Admin module: false
+  → User doesn't have any admin-related role
+  → Fix: Assign a role with admin permissions
+
+users.read: false
+  → User's role doesn't have users.read permission
+  → Fix: Add users.read to the role's permissions
+
+Can impersonate: false
+  → One or both checks above failed
+  → Fix: Ensure user has admin role with users.read
+
+═══════════════════════════════════════════════════════════════

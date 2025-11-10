@@ -1,0 +1,499 @@
+{
+  "staticMenuItems": [
+    {
+      "id": "home",
+      "name": "Home",
+      "path": "/",
+      "icon": "house",
+      "keywords": ["home"]
+    }
+  ],
+  "moduleSubmenus": {
+    "admin": {
+      "items": [
+        {
+          "id": "admin-dashboard",
+          "name": "Dashboard",
+          "path": "/module/admin",
+          "icon": "speedometer2",
+          "iconColor": "danger",
+          "keywords": ["dashboard"]
+        },
+        {
+          "id": "users",
+          "name": "Users",
+          "path": "/users",
+          "icon": "people",
+          "iconColor": "primary",
+          "keywords": ["users"],
+          "permission": "users.read"
+        },
+        {
+          "id": "roles",
+          "name": "Roles",
+          "path": "/roles",
+          "icon": "shield-check",
+          "iconColor": "success",
+          "keywords": ["roles"],
+          "permission": "roles.read"
+        },
+        {
+          "id": "permissions",
+          "name": "Permissions",
+          "path": "/permissions",
+          "icon": "gear-wide-connected",
+          "iconColor": "warning",
+          "keywords": ["permissions"],
+          "permission": "permissions.read"
+        },
+        {
+          "id": "impersonate",
+          "name": "Impersonate User",
+          "path": "/users/impersonate",
+          "icon": "incognito",
+          "iconColor": "warning",
+          "keywords": ["impersonate", "support", "troubleshoot"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "security",
+          "title": "SECURITY",
+          "keywords": ["security", "audit", "settings", "activity", "sessions"],
+          "items": [
+            {
+              "id": "audit-log",
+              "name": "Audit Log",
+              "path": "/security/audit-log",
+              "icon": "clock-history",
+              "iconColor": "danger",
+              "keywords": ["audit", "log"],
+              "permission": "security.read"
+            },
+            {
+              "id": "security-settings",
+              "name": "Security Settings",
+              "path": "/security/settings",
+              "icon": "gear",
+              "iconColor": "warning",
+              "keywords": ["settings", "security"],
+              "permission": "security.manage"
+            },
+            {
+              "id": "user-activity",
+              "name": "User Activity",
+              "path": "/security/activity",
+              "icon": "activity",
+              "iconColor": "info",
+              "keywords": ["activity", "monitor"],
+              "permission": "security.read"
+            },
+            {
+              "id": "sessions",
+              "name": "Sessions",
+              "path": "/security/sessions",
+              "icon": "pc-display",
+              "iconColor": "success",
+              "keywords": ["sessions"],
+              "permission": "security.manage"
+            },
+            {
+              "id": "security-demo",
+              "name": "Security Demo",
+              "path": "/admin/security-demo",
+              "icon": "shield-lock",
+              "iconColor": "primary",
+              "keywords": ["demo", "security"],
+              "permission": "module.admin"
+            }
+          ]
+        }
+      ]
+    },
+    "sla": {
+      "items": [
+        {
+          "id": "sla-dashboard",
+          "name": "Dashboard",
+          "path": "/sla/dashboard",
+          "icon": "speedometer2",
+          "iconColor": "primary",
+          "keywords": ["dashboard"]
+        },
+        {
+          "id": "incidents",
+          "name": "Incidents",
+          "path": "/sla/incidents",
+          "icon": "exclamation-triangle",
+          "iconColor": "danger",
+          "keywords": ["incidents"]
+        }
+      ]
+    },
+    "sales": {
+      "items": [
+        {
+          "id": "sales-dashboard",
+          "name": "Dashboard",
+          "path": "/module/sales",
+          "icon": "speedometer2",
+          "iconColor": "success",
+          "keywords": ["dashboard"]
+        }
+      ]
+    },
+    "analytics": {
+      "items": [
+        {
+          "id": "analytics-dashboard",
+          "name": "Dashboard",
+          "path": "/module/analytics",
+          "icon": "speedometer2",
+          "iconColor": "info",
+          "keywords": ["dashboard"]
+        },
+        {
+          "id": "forecast",
+          "name": "Forecast",
+          "path": "/module/analytics/forecast",
+          "icon": "graph-up-arrow",
+          "keywords": ["forecast"]
+        }
+      ]
+    },
+    "gdocs": {
+      "items": [
+        {
+          "id": "inbox",
+          "name": "Inbox",
+          "path": "/gdocs/inbox",
+          "icon": "inbox",
+          "iconColor": "primary",
+          "keywords": ["inbox"],
+          "children": [
+            {
+              "id": "inbox-purchase-orders",
+              "name": "Inbox POs",
+              "path": "/gdocs/inbox/purchase-orders",
+              "icon": "clipboard-check",
+              "keywords": ["inbox", "purchase"],
+              "indent": true
+            },
+            {
+              "id": "inbox-invoices",
+              "name": "Inbox Invoices",
+              "path": "/gdocs/inbox/invoices",
+              "icon": "receipt",
+              "keywords": ["inbox", "invoice"],
+              "indent": true
+            },
+            {
+              "id": "inbox-acknowledgements",
+              "name": "Inbox ACKs",
+              "path": "/gdocs/inbox/acknowledgements",
+              "icon": "check-circle",
+              "keywords": ["inbox", "acknowledgement"],
+              "indent": true
+            }
+          ]
+        },
+        {
+          "id": "outbox",
+          "name": "Outbox",
+          "path": "/gdocs/outbox",
+          "icon": "send",
+          "iconColor": "success",
+          "keywords": ["outbox"],
+          "children": [
+            {
+              "id": "outbox-purchase-orders",
+              "name": "Outbox POs",
+              "path": "/gdocs/outbox/purchase-orders",
+              "icon": "clipboard-check",
+              "keywords": ["outbox", "purchase"],
+              "indent": true
+            },
+            {
+              "id": "outbox-invoices",
+              "name": "Outbox Invoices",
+              "path": "/gdocs/outbox/invoices",
+              "icon": "receipt",
+              "keywords": ["outbox", "invoice"],
+              "indent": true
+            },
+            {
+              "id": "open-po-search",
+              "name": "Open PO Search",
+              "path": "/gdocs/outbox/open-po-search",
+              "icon": "search",
+              "iconColor": "info",
+              "keywords": ["outbox", "open", "search"],
+              "indent": true
+            },
+            {
+              "id": "open-invoice-search",
+              "name": "Open Invoice Search",
+              "path": "/gdocs/outbox/open-invoice-search",
+              "icon": "search",
+              "iconColor": "warning",
+              "keywords": ["outbox", "open", "search"],
+              "indent": true
+            }
+          ]
+        },
+        {
+          "id": "invoice-reports",
+          "name": "Invoice Reports",
+          "path": "/gdocs/reports/invoices",
+          "icon": "file-bar-graph",
+          "keywords": ["reports"]
+        },
+        {
+          "id": "open-orders-reports",
+          "name": "Open Orders Reports",
+          "path": "/gdocs/reports/open-orders",
+          "icon": "bar-chart-line",
+          "keywords": ["reports", "orders"]
+        }
+      ]
+    },
+    "commerce": {
+      "items": [
+        {
+          "id": "commerce-dashboard",
+          "name": "Dashboard",
+          "path": "/website/ecommerce",
+          "icon": "speedometer2",
+          "iconColor": "success",
+          "keywords": ["dashboard"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "b2b-management",
+          "title": "B2B MANAGEMENT",
+          "keywords": ["b2b", "business"],
+          "items": [
+            {
+              "id": "b2b-dashboard",
+              "name": "B2B Dashboard",
+              "path": "/website/b2b",
+              "icon": "building-gear",
+              "iconColor": "info",
+              "keywords": ["b2b", "dashboard"]
+            },
+            {
+              "id": "products",
+              "name": "Products",
+              "path": "/website/products",
+              "icon": "box-seam",
+              "keywords": ["products", "catalog"]
+            },
+            {
+              "id": "categories",
+              "name": "Categories",
+              "path": "/website/categories",
+              "icon": "tags",
+              "keywords": ["categories", "catalog"]
+            },
+            {
+              "id": "inventory",
+              "name": "Inventory",
+              "path": "/website/inventory",
+              "icon": "boxes",
+              "keywords": ["inventory", "stock"]
+            },
+            {
+              "id": "quotes",
+              "name": "Quotes",
+              "path": "/website/b2b/quotes",
+              "icon": "file-earmark-text",
+              "keywords": ["quotes", "rfq", "b2b"]
+            },
+            {
+              "id": "pricelists",
+              "name": "Price Lists",
+              "path": "/website/b2b/pricelists",
+              "icon": "cash-stack",
+              "keywords": ["pricelists", "pricing", "b2b"]
+            },
+            {
+              "id": "contracts",
+              "name": "Contracts",
+              "path": "/website/b2b/contracts",
+              "icon": "file-earmark-ruled",
+              "keywords": ["contracts", "b2b"]
+            },
+            {
+              "id": "purchase-orders",
+              "name": "Purchase Orders",
+              "path": "/website/b2b/purchase-orders",
+              "icon": "clipboard-check",
+              "keywords": ["purchase", "po", "b2b"]
+            }
+          ]
+        },
+        {
+          "id": "customer-portal",
+          "title": "CUSTOMER PORTAL",
+          "keywords": ["storefront", "portal"],
+          "items": [
+            {
+              "id": "storefront",
+              "name": "Storefront",
+              "path": "/b2b-store",
+              "icon": "shop-window",
+              "iconColor": "info",
+              "keywords": ["storefront", "portal", "dashboard"]
+            },
+            {
+              "id": "catalog",
+              "name": "Catalog",
+              "path": "/b2b-store/catalog",
+              "icon": "grid",
+              "keywords": ["catalog", "storefront"]
+            },
+            {
+              "id": "quick-order",
+              "name": "Quick Order",
+              "path": "/b2b-store/quick-order",
+              "icon": "lightning",
+              "iconColor": "warning",
+              "keywords": ["quick", "order", "storefront"]
+            },
+            {
+              "id": "shopping-cart",
+              "name": "Shopping Cart",
+              "path": "/b2b-store/cart",
+              "icon": "cart3",
+              "iconColor": "primary",
+              "keywords": ["cart", "storefront"]
+            },
+            {
+              "id": "order-history",
+              "name": "Order History",
+              "path": "/b2b-store/orders",
+              "icon": "box-seam",
+              "iconColor": "info",
+              "keywords": ["orders", "storefront"]
+            },
+            {
+              "id": "purchased-products",
+              "name": "Purchased Products",
+              "path": "/b2b-store/purchased-products",
+              "icon": "cart-check",
+              "iconColor": "success",
+              "keywords": ["purchased", "purchase history", "storefront"]
+            },
+            {
+              "id": "invoice-history",
+              "name": "Invoice History",
+              "path": "/b2b-store/invoices",
+              "icon": "receipt",
+              "iconColor": "success",
+              "keywords": ["invoices", "storefront"]
+            },
+            {
+              "id": "my-account",
+              "name": "My Account",
+              "path": "/b2b-store/account",
+              "icon": "person-circle",
+              "keywords": ["account", "storefront"],
+              "children": [
+                {
+                  "id": "address-book",
+                  "name": "Address Book",
+                  "path": "/b2b-store/account/addresses",
+                  "icon": "geo-alt",
+                  "iconColor": "primary",
+                  "keywords": ["address", "account", "storefront"],
+                  "indent": true
+                },
+                {
+                  "id": "payment-methods",
+                  "name": "Payment Methods",
+                  "path": "/b2b-store/account/payment-methods",
+                  "icon": "credit-card",
+                  "iconColor": "success",
+                  "keywords": ["payment", "account", "storefront"],
+                  "indent": true
+                }
+              ]
+            },
+            {
+              "id": "approvals",
+              "name": "Approvals",
+              "path": "/b2b-store/approvals",
+              "icon": "check-circle",
+              "iconColor": "warning",
+              "keywords": ["approval", "storefront"],
+              "children": [
+                {
+                  "id": "my-requests",
+                  "name": "My Requests",
+                  "path": "/b2b-store/approvals/requests",
+                  "icon": "send",
+                  "iconColor": "primary",
+                  "keywords": ["approval", "request", "storefront"],
+                  "indent": true
+                },
+                {
+                  "id": "approval-rules",
+                  "name": "Approval Rules",
+                  "path": "/b2b-store/approvals/rules",
+                  "icon": "gear",
+                  "iconColor": "secondary",
+                  "keywords": ["approval", "rules", "storefront"],
+                  "indent": true
+                }
+              ]
+            },
+            {
+              "id": "keepstock",
+              "name": "KeepStock",
+              "path": "/b2b-store/keepstock",
+              "icon": "boxes",
+              "iconColor": "info",
+              "keywords": ["keepstock", "reorder", "replenishment", "storefront"]
+            },
+            {
+              "id": "punchout-inbound",
+              "name": "Punchout (Inbound)",
+              "path": "/b2b-store/punchout",
+              "icon": "link-45deg",
+              "iconColor": "primary",
+              "keywords": ["punchout", "procurement", "storefront"]
+            },
+            {
+              "id": "external-suppliers",
+              "name": "External Suppliers",
+              "path": "/b2b-store/external-punchout",
+              "icon": "box-arrow-up-right",
+              "iconColor": "success",
+              "keywords": ["external", "supplier", "storefront"]
+            }
+          ]
+        }
+      ]
+    },
+    "companies": {
+      "items": [
+        {
+          "id": "companies",
+          "name": "Companies",
+          "path": "/companies",
+          "icon": "building",
+          "iconColor": "primary",
+          "keywords": ["companies"]
+        },
+        {
+          "id": "add-company",
+          "name": "Add Company",
+          "path": "/companies/new",
+          "icon": "plus-circle",
+          "keywords": ["add", "company"]
+        }
+      ]
+    }
+  }
+}

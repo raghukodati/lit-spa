@@ -1,0 +1,43 @@
+{
+  "invoiceReports": {
+    "monthlyData": [
+      { "month": "Jan", "sent": 45, "paid": 38, "pending": 7, "totalAmount": 450000 },
+      { "month": "Feb", "sent": 52, "paid": 47, "pending": 5, "totalAmount": 520000 },
+      { "month": "Mar", "sent": 48, "paid": 42, "pending": 6, "totalAmount": 480000 },
+      { "month": "Apr", "sent": 55, "paid": 50, "pending": 5, "totalAmount": 550000 },
+      { "month": "May", "sent": 60, "paid": 54, "pending": 6, "totalAmount": 600000 },
+      { "month": "Jun", "sent": 58, "paid": 52, "pending": 6, "totalAmount": 580000 },
+      { "month": "Jul", "sent": 62, "paid": 56, "pending": 6, "totalAmount": 620000 },
+      { "month": "Aug", "sent": 57, "paid": 51, "pending": 6, "totalAmount": 570000 },
+      { "month": "Sep", "sent": 63, "paid": 58, "pending": 5, "totalAmount": 630000 },
+      { "month": "Oct", "sent": 59, "paid": 53, "pending": 6, "totalAmount": 590000 }
+    ],
+    "tableData": [
+      { "invoice": "INV-OUT-2024-001", "customer": "Beta Manufacturing", "amount": 45000, "status": "Sent", "dueDate": "2024-11-26" },
+      { "invoice": "INV-OUT-2024-002", "customer": "Gamma Enterprises", "amount": 32000, "status": "Viewed", "dueDate": "2024-11-25" },
+      { "invoice": "INV-OUT-2024-003", "customer": "Delta Services Inc", "amount": 18500, "status": "Paid", "dueDate": "2024-11-24" },
+      { "invoice": "INV-OUT-2024-004", "customer": "Epsilon Corp", "amount": 28000, "status": "Sent", "dueDate": "2024-11-23" },
+      { "invoice": "INV-OUT-2024-005", "customer": "Zeta Industries", "amount": 52000, "status": "Partial", "dueDate": "2024-11-22" }
+    ]
+  },
+  "openOrdersReports": {
+    "monthlyData": [
+      { "month": "Jan", "openOrders": 15, "totalValue": 750000, "avgDays": 12 },
+      { "month": "Feb", "openOrders": 18, "totalValue": 900000, "avgDays": 10 },
+      { "month": "Mar", "openOrders": 12, "totalValue": 600000, "avgDays": 15 },
+      { "month": "Apr", "openOrders": 20, "totalValue": 1000000, "avgDays": 11 },
+      { "month": "May", "openOrders": 22, "totalValue": 1100000, "avgDays": 9 },
+      { "month": "Jun", "openOrders": 19, "totalValue": 950000, "avgDays": 13 },
+      { "month": "Jul", "openOrders": 25, "totalValue": 1250000, "avgDays": 8 },
+      { "month": "Aug", "openOrders": 21, "totalValue": 1050000, "avgDays": 14 },
+      { "month": "Sep", "openOrders": 23, "totalValue": 1150000, "avgDays": 10 },
+      { "month": "Oct", "openOrders": 20, "totalValue": 1000000, "avgDays": 12 }
+    ],
+    "tableData": [
+      { "poNumber": "PO-OUT-2024-001", "customer": "Beta Manufacturing", "value": 45000, "status": "Sent", "daysOpen": 5 },
+      { "poNumber": "PO-OUT-2024-002", "customer": "Gamma Enterprises", "value": 32000, "status": "Acknowledged", "daysOpen": 6 },
+      { "poNumber": "PO-OUT-2024-004", "customer": "Epsilon Corp", "value": 28000, "status": "Sent", "daysOpen": 8 },
+      { "poNumber": "PO-OUT-2024-005", "customer": "Zeta Industries", "value": 52000, "status": "Acknowledged", "daysOpen": 9 }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sla",
+    "name": "SLA",
+    "icon": "speedometer2",
+    "color": "primary",
+    "description": "Service Level Agreement monitoring and incident management",
+    "requiredRoles": [1, 2],
+    "entities": ["incidents"]
+  },
+  {
+    "id": "sales",
+    "name": "Sales",
+    "icon": "cart-check",
+    "color": "success",
+    "description": "Sales and order management",
+    "requiredRoles": [1, 3],
+    "entities": ["orders", "customers", "products"]
+  },
+  {
+    "id": "analytics",
+    "name": "Analytics",
+    "icon": "graph-up",
+    "color": "info",
+    "description": "Business intelligence and reports",
+    "requiredRoles": [1, 2],
+    "entities": ["reports"]
+  },
+  {
+    "id": "gdocs",
+    "name": "Gdocs",
+    "icon": "file-earmark-text",
+    "color": "secondary",
+    "description": "Document management and collaboration",
+    "requiredRoles": [1, 2],
+    "entities": ["gdocs"]
+  }
+]
