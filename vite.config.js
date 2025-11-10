@@ -24,6 +24,7 @@ export default defineConfig({
       }
     }
   },
+  base: '/lit-spa',
   server: {
     port: 3000
   }

@@ -1,0 +1,53 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+.pnpm-store/
+
+# Build output
+dist/
+build/
+.tmp/
+.temp/
+
+# Vite
+.vite/
+vite.svg
+
+# SSR/prerender artifacts (if any)
+.ssr/
+.prerender/
+
+# gh-pages
+.publish/
+.gh-pages-cache/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.iml
+
+# Coverage / Reports
+coverage/
+*.lcov
+
+# Logs
+logs/
+*.log
+*.log.*

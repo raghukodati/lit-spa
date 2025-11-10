@@ -1,5 +1,6 @@
 {
   "name": "lit-spa",
+  "homepage": "https://raghukodati.github.io/lit-spa",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -8,12 +9,15 @@
     "build": "vite build",
     "preview": "vite preview --open",
     "ssr:prerender": "node scripts/prerender.js",
-    "build:ssr": "vite build && node scripts/prerender.js"
+    "build:ssr": "vite build && node scripts/prerender.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@casl/ability": "^6.7.1",
     "@lit-labs/router": "^0.1.0",
     "bootstrap": "^5.3.2",
+    "gh-pages": "^6.3.0",
     "lit": "^3.1.0",
     "oidc-client-ts": "^3.0.1"
   },
