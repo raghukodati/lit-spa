@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "name": "Acme Corporation",
+    "code": "ACME",
+    "email": "contact@acme.com",
+    "phone": "+1 (555) 123-4567",
+    "address": "123 Business St, New York, NY 10001",
+    "industry": "Technology",
+    "status": "active",
+    "tier": "enterprise",
+    "createdAt": "2024-01-15",
+    "settings": {
+      "allowSelfRegistration": false,
+      "requireMFA": true,
+      "sessionTimeout": 3600
+    }
+  },
+  {
+    "id": 2,
+    "name": "GlobalTech Solutions",
+    "code": "GTECH",
+    "email": "info@globaltech.com",
+    "phone": "+1 (555) 234-5678",
+    "address": "456 Tech Park, San Francisco, CA 94105",
+    "industry": "Software",
+    "status": "active",
+    "tier": "professional",
+    "createdAt": "2024-02-20",
+    "settings": {
+      "allowSelfRegistration": true,
+      "requireMFA": false,
+      "sessionTimeout": 7200
+    }
+  },
+  {
+    "id": 3,
+    "name": "Innovate Industries",
+    "code": "INOV",
+    "email": "hello@innovate.com",
+    "phone": "+1 (555) 345-6789",
+    "address": "789 Innovation Blvd, Austin, TX 78701",
+    "industry": "Manufacturing",
+    "status": "active",
+    "tier": "basic",
+    "createdAt": "2024-03-10",
+    "settings": {
+      "allowSelfRegistration": true,
+      "requireMFA": false,
+      "sessionTimeout": 3600
+    }
+  },
+  {
+    "id": 4,
+    "name": "Beta Testing Inc",
+    "code": "BETA",
+    "email": "contact@betatest.com",
+    "phone": "+1 (555) 456-7890",
+    "address": "321 Test Lane, Seattle, WA 98101",
+    "industry": "Consulting",
+    "status": "trial",
+    "tier": "trial",
+    "createdAt": "2024-09-01",
+    "settings": {
+      "allowSelfRegistration": false,
+      "requireMFA": false,
+      "sessionTimeout": 1800
+    }
+  }
+]

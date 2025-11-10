@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "admin123",
+    "email": "admin@example.com",
+    "role": "Super Admin",
+    "name": "Super Admin"
+  },
+  {
+    "id": 2,
+    "username": "manager",
+    "password": "manager123",
+    "email": "manager@example.com",
+    "role": "Manager",
+    "name": "Manager User"
+  },
+  {
+    "id": 3,
+    "username": "user",
+    "password": "user123",
+    "email": "user@example.com",
+    "role": "Sales User",
+    "name": "Sales User"
+  },
+  {
+    "id": 4,
+    "username": "analyst",
+    "password": "analyst123",
+    "email": "analyst@example.com",
+    "role": "Data Analyst",
+    "name": "Data Analyst"
+  },
+  {
+    "id": 5,
+    "username": "inventory",
+    "password": "inventory123",
+    "email": "inventory@example.com",
+    "role": "Inventory Manager",
+    "name": "Inventory Manager"
+  },
+  {
+    "id": 6,
+    "username": "crm",
+    "password": "crm123",
+    "email": "crm@example.com",
+    "role": "CRM Specialist",
+    "name": "CRM Specialist"
+  }
+]

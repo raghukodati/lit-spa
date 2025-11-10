@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "customerId": 1,
+    "customerRoleId": 1,
+    "department": "IT",
+    "position": "System Administrator",
+    "isPrimary": true,
+    "status": "active",
+    "joinedAt": "2024-01-15"
+  },
+  {
+    "id": 2,
+    "userId": 2,
+    "customerId": 1,
+    "customerRoleId": 2,
+    "department": "Sales",
+    "position": "Sales Manager",
+    "isPrimary": false,
+    "status": "active",
+    "joinedAt": "2024-01-20"
+  },
+  {
+    "id": 3,
+    "userId": 3,
+    "customerId": 2,
+    "customerRoleId": 1,
+    "department": "Operations",
+    "position": "Operations Director",
+    "isPrimary": true,
+    "status": "active",
+    "joinedAt": "2024-02-20"
+  },
+  {
+    "id": 4,
+    "userId": 4,
+    "customerId": 2,
+    "customerRoleId": 2,
+    "department": "Marketing",
+    "position": "Marketing Specialist",
+    "isPrimary": false,
+    "status": "active",
+    "joinedAt": "2024-03-01"
+  },
+  {
+    "id": 5,
+    "userId": 5,
+    "customerId": 3,
+    "customerRoleId": 1,
+    "department": "Management",
+    "position": "CEO",
+    "isPrimary": true,
+    "status": "active",
+    "joinedAt": "2024-03-10"
+  }
+]

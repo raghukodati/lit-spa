@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "name": "Customer Admin",
+    "code": "customer_admin",
+    "description": "Full administrative access within the customer organization",
+    "permissions": [
+      "manage_users",
+      "manage_settings",
+      "view_reports",
+      "manage_data",
+      "export_data"
+    ],
+    "level": "admin",
+    "isSystem": true
+  },
+  {
+    "id": 2,
+    "name": "Customer User",
+    "code": "customer_user",
+    "description": "Standard user access within the customer organization",
+    "permissions": [
+      "view_data",
+      "edit_own_data",
+      "view_reports"
+    ],
+    "level": "user",
+    "isSystem": true
+  },
+  {
+    "id": 3,
+    "name": "Customer Manager",
+    "code": "customer_manager",
+    "description": "Manager level access within the customer organization",
+    "permissions": [
+      "view_data",
+      "edit_data",
+      "view_reports",
+      "manage_team"
+    ],
+    "level": "manager",
+    "isSystem": true
+  },
+  {
+    "id": 4,
+    "name": "Customer Viewer",
+    "code": "customer_viewer",
+    "description": "Read-only access within the customer organization",
+    "permissions": [
+      "view_data"
+    ],
+    "level": "viewer",
+    "isSystem": true
+  }
+]

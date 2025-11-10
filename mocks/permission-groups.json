@@ -1,0 +1,97 @@
+[
+  {
+    "id": "group_user_mgmt",
+    "name": "User Management",
+    "description": "Permissions for managing user accounts and access",
+    "category": "security",
+    "icon": "people",
+    "color": "primary",
+    "displayOrder": 10,
+    "permissions": [
+      "perm_users_create",
+      "perm_users_read",
+      "perm_users_update",
+      "perm_users_delete"
+    ]
+  },
+  {
+    "id": "group_role_mgmt",
+    "name": "Role & Permission Management",
+    "description": "Manage roles and permission assignments",
+    "category": "security",
+    "icon": "shield-lock",
+    "color": "danger",
+    "displayOrder": 11,
+    "permissions": [
+      "perm_roles_manage",
+      "perm_permissions_manage"
+    ]
+  },
+  {
+    "id": "group_crm",
+    "name": "Customer Relationship Management",
+    "description": "Manage customer data and relationships",
+    "category": "data",
+    "icon": "person-badge",
+    "color": "success",
+    "displayOrder": 20,
+    "permissions": [
+      "perm_customers_create",
+      "perm_customers_read",
+      "perm_customers_update",
+      "perm_customers_delete"
+    ]
+  },
+  {
+    "id": "group_sales",
+    "name": "Sales Operations",
+    "description": "Sales order and product management",
+    "category": "data",
+    "icon": "cart-check",
+    "color": "primary",
+    "displayOrder": 30,
+    "permissions": [
+      "perm_orders_create",
+      "perm_orders_approve",
+      "perm_products_manage"
+    ]
+  },
+  {
+    "id": "group_sla",
+    "name": "SLA & Incident Management",
+    "description": "Track and manage service incidents",
+    "category": "data",
+    "icon": "exclamation-triangle",
+    "color": "warning",
+    "displayOrder": 40,
+    "permissions": [
+      "perm_incidents_create",
+      "perm_incidents_assign"
+    ]
+  },
+  {
+    "id": "group_analytics",
+    "name": "Analytics & Reporting",
+    "description": "Access to reports and business intelligence",
+    "category": "reports",
+    "icon": "graph-up",
+    "color": "info",
+    "displayOrder": 50,
+    "permissions": [
+      "perm_reports_view",
+      "perm_reports_export"
+    ]
+  },
+  {
+    "id": "group_system",
+    "name": "System Administration",
+    "description": "System configuration and maintenance",
+    "category": "system",
+    "icon": "gear",
+    "color": "secondary",
+    "displayOrder": 60,
+    "permissions": [
+      "perm_settings_manage"
+    ]
+  }
+]

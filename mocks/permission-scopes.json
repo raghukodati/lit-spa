@@ -1,0 +1,74 @@
+[
+  {
+    "id": "global",
+    "name": "Global Access",
+    "description": "Access to all data across the entire organization without restrictions",
+    "level": 1,
+    "icon": "globe",
+    "color": "danger",
+    "examples": [
+      "Super Admin can view/edit all records",
+      "System-wide data access"
+    ]
+  },
+  {
+    "id": "organization",
+    "name": "Organization Access",
+    "description": "Access to all data within the user's organization",
+    "level": 2,
+    "icon": "building",
+    "color": "primary",
+    "examples": [
+      "Organization Admin can view all data in their org",
+      "Cross-department visibility within organization"
+    ]
+  },
+  {
+    "id": "department",
+    "name": "Department Access",
+    "description": "Access to data within the user's department only",
+    "level": 3,
+    "icon": "diagram-3",
+    "color": "info",
+    "examples": [
+      "Department Manager can view all team data",
+      "Cross-team visibility within department"
+    ]
+  },
+  {
+    "id": "team",
+    "name": "Team Access",
+    "description": "Access to data within the user's team only",
+    "level": 4,
+    "icon": "people",
+    "color": "warning",
+    "examples": [
+      "Team Lead can view all team member records",
+      "Shared team data access"
+    ]
+  },
+  {
+    "id": "own",
+    "name": "Own Data Only",
+    "description": "Access restricted to user's own data and records they created or own",
+    "level": 5,
+    "icon": "person",
+    "color": "success",
+    "examples": [
+      "User can only view their own records",
+      "Self-service access only"
+    ]
+  },
+  {
+    "id": "custom",
+    "name": "Custom Scope",
+    "description": "Access based on custom rules and conditions defined per role",
+    "level": 6,
+    "icon": "sliders",
+    "color": "secondary",
+    "examples": [
+      "Sales Rep can view customers in their territory",
+      "Project Manager can view projects they are assigned to"
+    ]
+  }
+]
